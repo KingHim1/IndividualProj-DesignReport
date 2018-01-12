@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  12 JAN 2018 06:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  12 JAN 2018 07:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -103,45 +103,48 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 40.
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
-
- []
-
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 71.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 71.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 71.
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
 
 
-LaTeX Warning: Citation 'budgen' on page 2 undefined on input line 78.
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 72.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 72.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 72.
+
+LaTeX Warning: Citation 'budgen' on page 2 undefined on input line 79.
 
 [2]
 
-LaTeX Warning: Citation 'euther' on page 3 undefined on input line 80.
+LaTeX Warning: Citation 'euther' on page 3 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'futher' on page 3 undefined on input line 80.
+LaTeX Warning: Citation 'futher' on page 3 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'futher' on page 3 undefined on input line 80.
+LaTeX Warning: Citation 'futher' on page 3 undefined on input line 81.
 
 No file designpaper.bbl.
 [3] (./designpaper.aux) ) 
 Here is how much of TeX's memory you used:
  467 strings out of 493089
  5619 string characters out of 6134842
- 59970 words of memory out of 5000000
+ 58970 words of memory out of 5000000
  4001 multiletter control sequences out of 15000+600000
  17641 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -150,7 +153,7 @@ Here is how much of TeX's memory you used:
 se/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on designpaper.pdf (3 pages, 47722 bytes).
+Output written on designpaper.pdf (3 pages, 47728 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  18 compressed objects within 1 object stream
