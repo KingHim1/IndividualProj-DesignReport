@@ -2,6 +2,10 @@
 \usepackage{times}
 \usepackage{durhampaper}
 \usepackage{harvard}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{fancybox}
 
 \citationmode{abbr}
 \bibliographystyle{agsm}
@@ -42,10 +46,108 @@ SAT Solver, search problem, machine learning.
 \end{keywords}
 \newpage
 \section{Introduction}
-{\bf Project Overview}\\\\
-SAT Solvers come in many variations, this project is to understand the practical purpose of SAT Solvers, how SAT Solvers have developed over the years and how some variations are implemented. Concrete results can be gathered from comparing SAT solvers through their running times and use cases. Moreover, implementation of SAT Solvers of different variations including the use of more modern techniques will be made. Overall, this project will consider SAT Solvers from a theoretical view and implementations will be made from a theoretical approach on ideas from search problem and machine learning concepts.\\\\
 
-%overview - 
+SAT Solvers come in many variations, this project is to understand the practical purpose of SAT Solvers, how SAT Solvers have developed over the years and how some variations are implemented. Concrete results can be gathered from comparing SAT solvers through their running times and use cases. Moreover, implementation of SAT Solvers of different variations including the use of more modern techniques will be made. Overall, this project will consider SAT Solvers from a theoretical view and implementations will be made from a theoretical approach on ideas from search problem and machine learning concepts.\\\\
+{\bf Project Domain}\\\\
+The boolean satisfiability problem is defined as: "does there exist a assignment of variables that satisfies the given boolean formula?" \\
+
+In our consideration of this problem we will focus on Boolean Formulas in Conjunctive Normal Form: A conjunction of clause where a clause is the disjunctions of literals. 
+\begin{itemize}
+	\begin{item}
+	A literal is a variable of the negation of the variable: x or $\neg$x.
+	\end{item}
+	\begin{item}
+	A conjunction (X $\land$ Y) or (X$_1$ $\land$ X$_2$ $\land$ ... $ \land$ X$_n$) is True only when all variables are True.
+	\end{item}
+	\begin{item}
+	A disjunction (X $\lor$ Y) or (X$_1$ $\lor$ X$_2$ $\lor$ ... $\lor$ X$_n$) is True only when at least one variable is True.
+	\end{item}
+\end{itemize}
+This problem is NP-complete and many other problems can be encoded as a Satisfiability problem therefore by having efficient solvers for this problem means being able to solve many other problems. Some real world applications for SAT solvers include: Model checking, scheduling and problem solving.\\\\
+Model Checking is used for hardware verification and is a technique of checking some property of the hardware by describing hardware functionality as a model: a set of states S  = $\{X_1, X_2, ..., X_n\}$ and transition relations between states  $\tau(S_1, S_2), S_1\in S$ and $S_2 \in S$. Some properties checked may include: Liveness, where a property eventually occurs e.g. used to check whether a response is eventually given or to check if cycles occur and Safety where a property always holds e.g. the reachability problem, to check whether or not a bad state can be reached. \\
+Bounded model checking where a property is checked within some k steps can be solved by SAT solvers checking for satisfiability on the formula: \\
+\begin{center}
+$I(s_0) \land \bigwedge \limits_{i=0}^{k-1} \tau(s_i, s_i+1) \land \bigvee \limits_{i=0}^{k}\neg p(s_i)$ 
+\end{center}
+Where $I(s_0)$ is defined as $s_0$ being the initial state, and all states $s_i$ are iterated through by a legal transition state and none of the states reached have the property $p$.\\\\ 
+\newpage
+{\bf Project Overview}\\\\
+The structure of this project will be focused on gaining insight in the multiple variations of SAT solvers from a theoretical view. Moreover, the projects goal of implementing of SAT solvers will allow a more in depth insight on workings of the algorithms.
+\\\\
+DPLL algorithm - Davis Putnam Loveland Logemann - is one such variety and one that is a basis to many modern day solvers, the algorithms involves getting as input a CNF formula and outputs whether the formula is satisfiable and if it is in fact satisfiable then it returns an assignment of variables that does so. The procedure to this algorithm follows a tree where each node of the tree is a set of clauses $S$ and at each node an assignment to a variable is made. 
+\begin{center}
+	\begin{tikzpicture}[level/.style={sibling distance=60mm/#1}]
+		\node [circle,draw] {}
+			child {node [circle,draw]  {$A$}
+				child {node [circle,draw]  {$B$}
+					child{ node {...}}
+					child{ node {...}}
+					}	
+				child {node [circle,draw]  {$\neg B$}
+					child{ node {...}}
+					child{ node {...}}
+				}
+			}
+			child {node [circle,draw] {$\neg A$}
+				child {node [circle,draw]  {}
+					child{ node {...}}
+					child{ node {...}}}
+				child {node [circle,draw]  {}
+					child{ node {...}}
+					child{ node {...}}
+				}
+			};
+	\end{tikzpicture}
+\end{center}
+At each node after a variable has been assigned, we then continually apply inference (propagation) and so reducing the number of assignments and thus nodes in the tree. A node no longer has children if the node has the set \{\} as its set of clauses or if the set of clauses contain the empty set $\epsilon \in$ S. \\
+If a branch has \{\} has its set of clauses then the formula is satisfiable and if all branches' set of all clauses contain the empty set $\epsilon \in$ S then the formula is unsatisfiable. \\\\
+CDCL - Conflict Driven Clause Learning - is another variety of SAT solvers first used in Grasp [1] which has influenced many modern SAT Solvers, this variety of solvers is characterised by adding new clauses to its initial set of clauses as the algorithm progresses and non-chronological backtracking. As the search progresses and the branch of the search tree encounters a conflict i.e. a variable is previously set True and the most recent propagation requires the variable to be set False or vice versa. Through the conflict the algorithm learns the clause to be added to our set of clauses (clause database). The non-chronological backtracking and clause learning enables the algorithm to prune the search tree and significantly reduce the time of discovering a satisfiable assignment or to show that the formula is unsatisfiable. \\\\
+There are also local search algorithms for SAT which is not complete and so may not provide an assignment of variables that satisfy the formula and may not be able to show that the formula is unsatisfiable however these algorithms can be shown to be efficient in specific cases of problems.\\
+Furthermore, a more modern approach to solving SAT problems is the use of machine learning and describing the problem as a classification problem, we can classify SAT problems so that solvers more efficient on specific categories of problems can be applied, this is in contrast to the more general SAT solvers.\\\\
+{\bf Project Deliverables}\\\\
+{\bf Basic deliverables:}
+\begin{enumerate}
+		\item Implement a brute force SAT Solver using an intuitive programming language for the problem (may not be efficient)
+			\begin{itemize}
+				\item{- compromise on efficiency to produce a basic SAT solver using a high level language e.g. Python. Use an intuitive implementation relying on simple data structures.}
+			\end{itemize}
+		\item Develop understanding on a programming language that aims to increase efficiency
+			\begin{itemize}
+				\item{ - Read online documentation on a programming language that allows efficient use of data storage and manipulation e.g. C++, consider efficient uses of data structures and lower level data handling.}
+			\end{itemize}
+		\item Discover and understand optimisations made to DPLL implementations of SAT Solvers
+			\begin{itemize}
+				\item{-Research and develop an understanding on faster algorithms and consider the implementation of such an algorithm in the high level programming language to show proof of concept.}
+			\end{itemize}
+		\item Develop an understanding on machine learning
+			\begin{itemize}
+				\item{- Undergo an online course* on basic machine learning concepts}
+			\end{itemize}	
+	\end{enumerate}
+{\bf Intermediate Deliverables:}
+	\begin{enumerate}
+		\item Research how machine learning can be applied to SAT Solving
+			\begin{itemize}
+				\item{- Read articles and research papers on the use of machine learning in SAT solving}
+			\end{itemize}
+		\item Implement a DPLL SAT Solver using an efficient programming language
+			\begin{itemize}
+				\item{- implement DPLL Sat Solver using the previously studied lower level programming language.}
+			\end{itemize}
+		\item Implement a DPLL SAT Solver involving multiple optimisations
+			\begin{itemize}
+				\item{- implement efficient data structures using the lower level language and implement researched optimisations to the algorithm e.g. watched literals.}
+			\end{itemize}
+		\item Explore and implement other versions of SAT solvers e.g. local search
+	\end{enumerate}
+{\bf Advanced Deliverables}
+	\begin{enumerate}
+		\item Analyse the efficiency benefits of the different optimisations in DPLL and its possible costs
+		\item Using the knowledge of most beneficial optimisations create a SAT Solver that is as efficient as possible (with the optimisations explored)
+		\item Implement a SAT Solver that utilises machine learning giving its benefits and costs
+	\end{enumerate}
+
+%overview -
 % - Describe Satisfiability Problem
 % - Describe problem as a solution of a search problem
 % - Describe the variations of this problem
