@@ -165,6 +165,24 @@ Furthermore, a more modern approach to solving SAT problems is the use of machin
 
 %Note that the whole report, including the references, should not be longer than 12 pages in length (there is no penalty for short papers if the required content is included). There should be at least 5 referenced papers.
 
+%Programming Language
+%Python (ease of programming and fast implementation) and C++ (mid level language allows for low level control and so more optimal implementation)
+
+%Algorithms
+%Pseudocode and explanation of different algorithms
+%DPLL
+%CDCL
+%Grasp/zChaff
+%Competition Examples
+%Neural Nets?
+%logical Regression 
+%Local Search Sat Solvers
+
+%Testing 
+%Unit Testing
+%Comparison of algorithms
+%Run against multiple examples and check speed
+
 \section{Design}
 The design outcome of this project is to produce multiple SAT solvers that can take as input a text file of the satisfiability problem in DIMACS format [reference to http://www.satcompetition.org/2009/format-benchmarks2009.html. \\\\
 \texttt{
@@ -212,30 +230,21 @@ begin\\
 \hspace*{1cm}if DPLL-recursive $(F |_\ell,\rho \cup \{\ell\})$ = SAT then return SAT\\
 \hspace*{1cm}return DPLL-recursive$(F |_{\neg\ell},\rho \cup \{\neg l \})$ \\
 end
-}\\\\
+}
+\begin{center}Pseudocode for DPLL Implementation [reference] \end{center}
+The DPLL is an early SAT Solver and our implementation has many optimisations that can be added, for example we can consider: 
+\begin{itemize}
+	\item{More optimally deciding which variable to branch on.}
+	\item{Ignoring branches that will not have a satisfying assignment.}
+\end{itemize}
+\hfill\\
 {\bf CDCL}\\
-CDCL Solvers are a variation of the DPLL algorithm and employs clause learning and other optimisations. Clause learning is the addition of learnt clauses to the original boolean formula throughout the running of the algorithm and is what distinguishes a CDCL solver to the original DPLL solvers.
-%Programming Language
-%Python (ease of programming and fast implementation) and C++ (mid level language allows for low level control and so more optimal implementation)
-
-%Algorithms
-%Pseudocode and explanation of different algorithms
-%DPLL
-%CDCL
-%Grasp/zChaff
-%Competition Examples
-%Neural Nets?
-%logical Regression 
-%Local Search Sat Solvers
-
-%Testing 
-%Unit Testing
-%Comparison of algorithms
-%Run against multiple examples and check speed
-Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1. \\\\
-Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation, this is essentially a depth first search, however more modern solvers apply better backtracking rules reducing the search space.\\\\
-Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack, in our basic variafhtion of our DPLL algorithm we backtrack to the last decision stage in which both values has not yet been assigned to the variable.\\\\
-
+CDCL Solvers are a variation of the DPLL algorithm and employs clause learning and other optimisations. Clause learning is the addition of learnt clauses to the original boolean formula throughout the running of the algorithm and is what distinguishes a CDCL solver to the original DPLL solvers. Our CDCL implementation will follow a repeating three stage process: Decide, Deduce and Resolve. 
+\begin{enumerate}
+	\item{Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1.}
+	\item{Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation.}
+	\item{Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack to the first implication point (U1P), from the conflict we can also learn new clauses that can be added to our input set of clauses.}
+\end{enumerate}
 \subsection{Main Text}
 
 The font used for the main text should be Times New Roman (Times) and the font size should be 12.  The first line of all paragraphs should be indented by 0.25in, except for the first paragraph of each section, subsection, subsubsection etc. (the paragraph immediately after the header) where no indentation is needed.
