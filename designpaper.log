@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  13 JAN 2018 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  18 JAN 2018 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -761,27 +761,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--109
 
  []
 
-[3] [4]
+[3]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 178.
 
-LaTeX Warning: Citation 'budgen' on page 5 undefined on input line 195.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (78.90952pt too wide) in paragraph at lines 169--180
+\OT1/ptm/m/n/12 text file of the sat-is-fi-a-bil-ity prob-lem in DI-MACS for-ma
+t [ref-er-ence to http://www.satcompetition.org/2009/format-
+ []
 
 
-LaTeX Warning: Citation 'euther' on page 5 undefined on input line 197.
+Underfull \hbox (badness 10000) in paragraph at lines 169--180
+
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 5 undefined on input line 197.
+Underfull \hbox (badness 10000) in paragraph at lines 169--180
+
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 5 undefined on input line 197.
+Underfull \hbox (badness 10000) in paragraph at lines 169--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--180
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
+
+ []
+
+[5]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 200.
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--218
+
+ []
+
+
+Overfull \hbox (14.06792pt too wide) in paragraph at lines 200--218
+\OT1/pcr/m/n/12 Input : A CNF formula F and an initially empty partial assignme
+nt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--218
+
+ []
+
+[6]
+
+LaTeX Warning: Citation 'budgen' on page 7 undefined on input line 254.
+
+
+LaTeX Warning: Citation 'euther' on page 7 undefined on input line 256.
+
+
+LaTeX Warning: Citation 'futher' on page 7 undefined on input line 256.
+
+
+LaTeX Warning: Citation 'futher' on page 7 undefined on input line 256.
 
 No file designpaper.bbl.
-[5] (./designpaper.aux) ) 
+[7] (./designpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 17764 strings out of 493089
- 395802 string characters out of 6134842
+ 17803 strings out of 493089
+ 396352 string characters out of 6134842
  461489 words of memory out of 5000000
- 20929 multiletter control sequences out of 15000+600000
- 18315 words of font info for 40 fonts, out of 8000000 for 9000
+ 20961 multiletter control sequences out of 15000+600000
+ 19345 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,69p,857b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/ba
@@ -792,13 +872,15 @@ i12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on designpaper.pdf (5 pages, 111760 bytes).
+usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb>
+Output written on designpaper.pdf (7 pages, 136108 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
