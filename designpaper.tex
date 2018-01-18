@@ -187,9 +187,11 @@ As we will comparing run times of implementations it will be useful to remove ov
 
 {\bf SAT Solver Variations}\\\\
 {\bf DPLL}\\
-The DPLL algorithm is a backtracking search of possible assignments of variables.Our implementation of this algorithm will follow the simplest depth first search version, a recursive form that repeat the rules: Decide, Deduce and Resolve.\\
-Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1. \\\\
-Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation, this is essentially a depth first search, however more modern solvers apply better backtracking rules reducing the search space.
+The DPLL algorithm is a backtracking search of possible assignments of variables.Our implementation of this algorithm will follow the simplest depth first search version, a recursive form that branches on a decided variable.\\
+We initially run unit propagation on our input clauses and check for satisfiability or unsatisfiability. Unit propagation is the search for any unit clauses, where a unit clause is a clause that contains only one literal, after finding a unit clause we then fix the literal (i.e. a variable or its negation) found in the unit clause to True, furthermore, for every clause that contains the literal we remove from our set of clauses as well as removing negations of literals from all clauses.\\
+We then check for an empty set of clause to indicate that the problem is satisfied, whereas if there is an empty set within our set of clause then the problem is unsatisfied.\\ 
+(reference to graph on previous pages???)\\
+After the initial check for satisfiability and unsatisfiability we then decide a variable to branch on, the function is recursively called twice on the set of clauses with the addition of either adding a unit clause of the variable in one case or a unit clause of it's negation in the other case.
 \texttt{
 \begin{center}Unit Propagation \end{center} 
 Input Boolean Formula:\\ \hspace*{1cm} (p $\lor$ q  $\lor$ r) $\land$ ($\neg$p $\lor$ r) $\land$ (p $\lor$ s) \\
@@ -230,6 +232,9 @@ CDCL Solvers are a variation of the DPLL algorithm and employs clause learning a
 %Unit Testing
 %Comparison of algorithms
 %Run against multiple examples and check speed
+Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1. \\\\
+Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation, this is essentially a depth first search, however more modern solvers apply better backtracking rules reducing the search space.\\\\
+Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack, in our basic variafhtion of our DPLL algorithm we backtrack to the last decision stage in which both values has not yet been assigned to the variable.\\\\
 
 \subsection{Main Text}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  18 JAN 2018 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  18 JAN 2018 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -808,54 +808,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--187
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--200
+Underfull \hbox (badness 10000) in paragraph at lines 188--202
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 200.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 202.
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--218
+Underfull \hbox (badness 10000) in paragraph at lines 202--220
 
  []
 
 
-Overfull \hbox (14.06792pt too wide) in paragraph at lines 200--218
+Underfull \hbox (badness 10000) in paragraph at lines 202--220
+
+ []
+
+
+Overfull \hbox (14.06792pt too wide) in paragraph at lines 202--220
 \OT1/pcr/m/n/12 Input : A CNF formula F and an initially empty partial assignme
 nt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--218
+Underfull \hbox (badness 10000) in paragraph at lines 202--220
 
  []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
-LaTeX Warning: Citation 'budgen' on page 7 undefined on input line 254.
-
-
-LaTeX Warning: Citation 'euther' on page 7 undefined on input line 256.
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 7 undefined on input line 256.
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
+
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 7 undefined on input line 256.
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
+
+ []
+
+
+LaTeX Warning: Citation 'budgen' on page 7 undefined on input line 259.
+
+
+LaTeX Warning: Citation 'euther' on page 7 undefined on input line 261.
+
+
+LaTeX Warning: Citation 'futher' on page 7 undefined on input line 261.
+
+
+LaTeX Warning: Citation 'futher' on page 7 undefined on input line 261.
+
+[7]
 No file designpaper.bbl.
-[7] (./designpaper.aux) ) 
+[8] (./designpaper.aux) ) 
 Here is how much of TeX's memory you used:
  17803 strings out of 493089
  396352 string characters out of 6134842
@@ -877,10 +892,10 @@ l/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb>
-Output written on designpaper.pdf (7 pages, 136108 bytes).
+Output written on designpaper.pdf (8 pages, 137567 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
