@@ -243,8 +243,95 @@ CDCL Solvers are a variation of the DPLL algorithm and employs clause learning a
 \begin{enumerate}
 	\item{Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1.}
 	\item{Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation.}
-	\item{Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack to the first implication point (U1P), from the conflict we can also learn new clauses that can be added to our input set of clauses.}
+	\item{Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack to the first unique implication point (UIP), from the conflict we can also learn new clauses that can be added to our input set of clauses.}
 \end{enumerate}
+\texttt{CDCL$(\phi, v)$
+\begin{enumerate}
+\itemsep0em
+\item{
+if (UnitPropagation$(\phi, v)$ == CONFLICT) }
+\item{
+\hspace*{0.5 cm} then return UNSAT}
+\item{
+dl $\leftarrow$ 0}
+\item{
+while (not AllVariablesAssigned$(\phi, v))$}
+\item{
+\hspace*{0.5cm} do $(x, v)$ = PickBranchingVariable$(\phi, v)$ \bf{[decide stage]}} 
+\item{
+\hspace*{1cm} $dl \leftarrow dl + 1$}
+\item{
+\hspace*{1.5cm} $v \leftarrow v \cup \{ (x, v) \}$}
+\item{
+\hspace*{2cm}if (UnitPropagation$(\phi, v)$ == CONFLICT) \bf{[deduce stage]}}
+\item{
+\hspace*{2.5cm} return SAT}
+\item{
+\hspace*{3cm} then $\beta$ = ConflictAnalysis$(\phi, v)$ if $(\beta < 0)$ \bf{[resolve stage]}}
+\item{
+\hspace*{3.5cm} then return UNSAT }
+\item{
+\hspace*{3.5cm} else Backtrack$(\phi, v, \beta)$}
+\item{
+\hspace*{4cm} $dl \leftarrow \beta$ }
+\end{enumerate}
+}
+\begin{center}Pseudocode for CDCL Implementation [reference] \end{center}
+Definitions:\\
+\begin{itemize}
+\item{
+Decision Level: every variable has a decision level, at each decision stage of our algorithm the decision level is incremented and the decided variable is set the new decision level, during the unit propagation stage if a variable is assigned a value then its decision level is set the same as the decision level of the most recent decided variable.}
+\item{
+Antecedent: Every variable has a antecedent, this is the original clause of the unit clause during unit propagation stage that caused the assignment of the variable. Variables assigned at the decide stage is set the empty clause as its antecedent.}
+\end{itemize}
+In this project I will focus only a few of the many optimisations for CDCL including: clause learning with UIP (unique implication points), lazy data structures with watched literals and backtracking to the first UIP.
+\begin{enumerate}
+\item{clause learning with UIP - Conflicts occur during the unit propagation stage, we search through the antecedents of variables of the highest decision level, those that were assigned during the most recent unit propagation, from these antecedents we add to a empty clause the literals that have a decision level value lower than the current decision level, finding such variables is achievable through resolution, this new clause will be the learnt clause and is added to our current set of clauses.\\\\
+\texttt{
+Resolution$(\omega1, \omega2)$: \\
+Input: two clauses with one containing unique variable x and the other containing $\neg$x :\\ \hspace*{1cm} $\omega1$ = (x $\lor$ y1  $\lor$ y2 $\lor$ ...), $\omega2$ = ($\neg$x $\lor$ z1 $\lor$ z2 $\lor$ ...)\\\\
+Output: clause containing all variables found in both clauses except x and $\neg$x:\\ \hspace*{2.5cm} (y1  $\lor$ y2 $\lor$ ... $\lor$ z1 $\lor$ z2 $\lor$ ...)
+}
+
+}
+\item{Watched Literals - This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the negation of a watched literal is fixed True, at the point where there is no longer any literals left of which its variable has not been assigned then the clause is a unit clause.\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
+\draw (1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0) node at (1.5, 0.5){w};
+\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0);
+\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
+\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
+\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
+\end{tikzpicture}\\
+\end{center}
+Clause represented by array - first two literals are watched literals.\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
+\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0) node [black] at (1.5, 0.5){w};
+\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0);
+\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
+\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
+\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
+\end{tikzpicture}\\
+\end{center}
+Second literal fixed to False.
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
+\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0);
+\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0) node at (2.5, 0.5){w};
+\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
+\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
+\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
+\end{tikzpicture}\\
+\end{center}
+Second watched literals reference is set to another literal that has not yet been fixed.
+}
+
+\end{enumerate}
+
 \subsection{Main Text}
 
 The font used for the main text should be Times New Roman (Times) and the font size should be 12.  The first line of all paragraphs should be indented by 0.25in, except for the first paragraph of each section, subsection, subsubsection etc. (the paragraph immediately after the header) where no indentation is needed.
