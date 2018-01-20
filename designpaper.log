@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  18 JAN 2018 21:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  20 JAN 2018 01:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,22 +551,28 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \EndVerbatimTokens=\toks41
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read2
-) (./designpaper.aux)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks42
+\verbatim@line=\toks43
+\verbatim@in@stream=\read3
+)
+(./designpaper.aux)
 \openout1 = `designpaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 23.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -579,12 +585,12 @@ ABD: EveryShipout initializing macros
 \scratchbox=\box62
 \nofMPsegments=\count133
 \nofMParguments=\count134
-\everyMPshowfont=\toks42
+\everyMPshowfont=\toks44
 \MPscratchCnt=\count135
 \MPscratchDim=\dimen167
 \MPnumerator=\count136
 \makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks43
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -634,205 +640,205 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 27.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--39
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--41
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 44.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 46.
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 57.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 59.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
 
-Overfull \hbox (12.86316pt too wide) in paragraph at lines 66--69
+Overfull \hbox (12.86316pt too wide) in paragraph at lines 68--71
 \OT1/ptm/m/n/12 of the hard-ware by de-scrib-ing hard-ware func-tion-al-ity as 
 a model: a set of states S = $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X[]; X[]; :::;
  X[]\OMS/cmsy/m/n/12 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 196.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 198.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (78.90952pt too wide) in paragraph at lines 187--198
+Overfull \hbox (78.90952pt too wide) in paragraph at lines 189--200
 \OT1/ptm/m/n/12 text file of the sat-is-fi-a-bil-ity prob-lem in DI-MACS for-ma
 t [ref-er-ence to http://www.satcompetition.org/2009/format-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 201--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 201--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 201--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--220
+Underfull \hbox (badness 10000) in paragraph at lines 208--222
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 220.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 222.
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--234
+Underfull \hbox (badness 10000) in paragraph at lines 222--236
 
  []
 
 
-Overfull \hbox (14.06792pt too wide) in paragraph at lines 220--234
+Underfull \hbox (badness 10000) in paragraph at lines 222--236
+
+ []
+
+
+Overfull \hbox (14.06792pt too wide) in paragraph at lines 222--236
 \OT1/pcr/m/n/12 Input : A CNF formula F and an initially empty partial assignme
 nt
  []
 
 [6]
-Overfull \hbox (14.4002pt too wide) in paragraph at lines 278--278
+Overfull \hbox (14.4002pt too wide) in paragraph at lines 280--280
 []|  \OT1/pcr/m/n/12 then $\OML/cmm/m/it/12 ^^L$ \OT1/pcr/m/n/12 = ConflictAnal
 ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  if $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^L < \OT1/cmr/m/n/12 0)$ \OT1/ptm/b/n/1
@@ -840,80 +846,144 @@ ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 
-Overfull \hbox (7.44263pt too wide) in paragraph at lines 289--295
+Overfull \hbox (7.44263pt too wide) in paragraph at lines 306--313
 \OT1/pcr/m/n/12 Input: two clauses with one containing unique variable x and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 
-Overfull \hbox (14.64262pt too wide) in paragraph at lines 289--295
+Overfull \hbox (14.64262pt too wide) in paragraph at lines 306--313
 \OT1/pcr/m/n/12 Output: clause containing all variables found in both clauses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
-LaTeX Warning: Citation 'budgen' on page 9 undefined on input line 355.
-
-
-LaTeX Warning: Citation 'euther' on page 9 undefined on input line 357.
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 9 undefined on input line 357.
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 382--411
+
+ []
 
 
-LaTeX Warning: Citation 'futher' on page 9 undefined on input line 357.
+Underfull \hbox (badness 10000) in paragraph at lines 382--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--418
+
+ []
+
+[10]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [11]
+
+LaTeX Warning: Citation 'budgen' on page 12 undefined on input line 462.
+
+
+LaTeX Warning: Citation 'euther' on page 12 undefined on input line 464.
+
+
+LaTeX Warning: Citation 'futher' on page 12 undefined on input line 464.
+
+
+LaTeX Warning: Citation 'futher' on page 12 undefined on input line 464.
 
 No file designpaper.bbl.
-[9] (./designpaper.aux) ) 
+[12] (./designpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 17814 strings out of 493089
- 396562 string characters out of 6134842
- 461489 words of memory out of 5000000
- 20972 multiletter control sequences out of 15000+600000
- 19345 words of font info for 44 fonts, out of 8000000 for 9000
+ 17966 strings out of 493089
+ 399216 string characters out of 6134842
+ 467357 words of memory out of 5000000
+ 21121 multiletter control sequences out of 15000+600000
+ 20359 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,69p,857b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb>
-Output written on designpaper.pdf (9 pages, 145439 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb>
+Output written on designpaper.pdf (12 pages, 156111 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
