@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: designpaper.aux
+The style file: agsm.bst
+Database file #1: projectpaper.bib
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1222 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1222 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1222 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1258 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1258 of file agsm.bst
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1258 of file agsm.bst
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1262 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1262 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1262 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1294 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1294 of file agsm.bst
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1294 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1327 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1327 of file agsm.bst
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1327 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1346 of file agsm.bst
+Name 2 in "Davis and Logemann, and Loveland" has a comma at the end for entry DPLL
+while executing---line 1346 of file agsm.bst
+Warning--empty author in satComp
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1346 of file agsm.bst
+Name 2 in "Marques-Silva and Lynce, and Sharad Malik" has a comma at the end for entry CDCL
+while executing---line 1346 of file agsm.bst
+Warning--empty author in dimacsFormat
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1346 of file agsm.bst
+Name 2 in "Vizel and Weissenbacher, and Malik" has a comma at the end for entry ModelChecking
+while executing---line 1346 of file agsm.bst
+You've used 12 entries,
+            2909 wiz_defined-function locations,
+            702 strings with 6586 characters,
+and the built_in function-call counts, 52865 in all, are:
+= -- 8698
+> -- 736
+< -- 0
++ -- 4207
+- -- 224
+* -- 4635
+:= -- 10497
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 156
+chr.to.int$ -- 12
+cite$ -- 14
+duplicate$ -- 184
+empty$ -- 309
+format.name$ -- 256
+if$ -- 9517
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 12
+newline$ -- 39
+num.names$ -- 108
+pop$ -- 54
+preamble$ -- 1
+purify$ -- 170
+quote$ -- 0
+skip$ -- 165
+stack$ -- 0
+substring$ -- 12232
+swap$ -- 35
+text.length$ -- 148
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 2
+while$ -- 218
+width$ -- 0
+write$ -- 159
+(There were 21 error messages)

@@ -1,0 +1,68 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Alfonso}{2014}{machineLearningFeatures}
+Alfonso, E.~M.  \harvardyearleft 2014\harvardyearright , `Increasing the
+  robustness of sat solving with machine learning techniques', {\em Master
+  Thesis - Technische Universit{\"a}t Dresden} .
+
+\harvarditem[Davis et~al.]{Davis, Logemann \harvardand\ Loveland}{1962}{DPLL}
+Davis, Logemann \harvardand\ Loveland  \harvardyearleft 1962\harvardyearright ,
+  `A machine program for theorem proving', {\em Communications of the ACM} .
+
+\harvarditem[Gomes et~al.]{Gomes, Kautz, Sabharwal \harvardand\
+  Selman}{2008}{DPLL-Implementation}
+Gomes, C.~P., Kautz, H., Sabharwal, A. \harvardand\ Selman, B.
+  \harvardyearleft 2008\harvardyearright , `Satisfiability solvers', {\em
+  Handbook of Knowledge Representation} .
+
+\harvarditem{{\em http://www.satcompetition.org}}{2018}{satComp}
+{\em http://www.satcompetition.org}  \harvardyearleft 2018\harvardyearright .
+
+\harvarditem{Marques-Silva \harvardand\ Sakallah}{1999}{GRASP}
+Marques-Silva, J.~P. \harvardand\ Sakallah, K.~A.  \harvardyearleft
+  1999\harvardyearright , `Grasp: A search algorithm for propositional
+  satisfiability', {\em IEEE TRANSACTIONS ON COMPUTERS, VOL. 48, NO. 5} .
+
+\harvarditem[Marques-Silva et~al.]{Marques-Silva, Lynce \harvardand\
+  Malik}{2009}{CDCL}
+Marques-Silva, Lynce \harvardand\ Malik, S.  \harvardyearleft
+  2009\harvardyearright , `Conflict-driven clause learning sat solvers', {\em
+  Handbook Of Satisfiability Chapter 4.} .
+
+\harvarditem[Moskewicz et~al.]{Moskewicz, Madigan, Zhao, Zhang \harvardand\
+  Malik}{2001}{chaff}
+Moskewicz, M.~W., Madigan, C.~F., Zhao, Y., Zhang, L. \harvardand\ Malik, S.
+  \harvardyearleft 2001\harvardyearright , `Chaff: Engineering an efficient sat
+  solver sat solver', {\em ACM} .
+
+\harvarditem{{\em Satisfiability Suggested Format}}{1993}{dimacsFormat}
+{\em Satisfiability Suggested Format}  \harvardyearleft 1993\harvardyearright ,
+  {\em
+  http://www.domagoj-babic.com/uploads/ResearchProjects/Spear/dimacs-cnf.pdf} .
+
+\harvarditem[Selman et~al.]{Selman, Kautz \harvardand\ Cohen}{1995}{WalkSat}
+Selman, B., Kautz, H. \harvardand\ Cohen, B.  \harvardyearleft
+  1995\harvardyearright , `Local search strategies for satisfiability testing',
+  {\em DIMACS Series in Discrete Mathematics and Theoretical Computer Science}
+  .
+
+\harvarditem[Vizel et~al.]{Vizel, Weissenbacher \harvardand\
+  Malik}{2015}{ModelChecking}
+Vizel, Weissenbacher \harvardand\ Malik  \harvardyearleft 2015\harvardyearright
+  , `Boolean satisfiability solvers and their applications in model checking',
+  {\em Proceedings of the IEEE} .
+
+\harvarditem[Xu et~al.]{Xu, Hutter, Hoos \harvardand\
+  Leyton-Brown}{2008}{satzilla}
+Xu, L., Hutter, F., Hoos, H.~H. \harvardand\ Leyton-Brown, K.  \harvardyearleft
+  2008\harvardyearright , `Satzilla: Portfolio-based algorithm selection for
+  sat', {\em Journal of Artificial Intelligence Research 32 (2008) 565-606} .
+
+\harvarditem[Zhang et~al.]{Zhang, Madigan, Moskewicz \harvardand\
+  Malik}{2001}{firstUIPbacktrack}
+Zhang, L., Madigan, C.~F., Moskewicz, M.~H. \harvardand\ Malik, S.
+  \harvardyearleft 2001\harvardyearright , `Efficient conflict driven learning
+  in a boolean satisfiability solver', {\em IEEE/ACM international conference
+  on Computer-aided design} .
+
+\end{thebibliography}
