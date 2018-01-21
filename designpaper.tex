@@ -44,7 +44,7 @@ Research modern technologies such as machine learning and how they may be used t
 \end{abstract}
 
 \begin{keywords}
-SAT Solver, search problem, machine learning.
+SAT Solver, local search problem, machine learning.
 \end{keywords}
 \newpage
 \section{Introduction}
@@ -66,17 +66,17 @@ In our consideration of this problem we will focus on Boolean Formulas in Conjun
 	\end{item}
 \end{itemize}
 This problem is NP-complete and many other problems can be encoded as a Satisfiability problem therefore by having efficient solvers for this problem means being able to solve many other problems. Some real world applications for SAT solvers include: Model checking, scheduling and problem solving.\\\\
-Model Checking is used for hardware verification and is a technique of checking some property of the hardware by describing hardware functionality as a model: a set of states S  = $\{X_1, X_2, ..., X_n\}$ and transition relations between states  $\tau(S_1, S_2), S_1\in S$ and $S_2 \in S$. Some properties checked may include: Liveness, where a property eventually occurs e.g. used to check whether a response is eventually given or to check if cycles occur and Safety where a property always holds e.g. the reachability problem, to check whether or not a bad state can be reached. \\
-Bounded model checking where a property is checked within some k steps can be solved by SAT solvers checking for satisfiability on the formula: \\
+Model Checking \cite[p. 2027]{ModelChecking} is used for hardware verification and is a technique of checking some property of the hardware by describing hardware functionality as a model: a set of states S  = $\{X_1, X_2, ..., X_n\}$ and transition relations between states  $\tau(S_1, S_2), S_1\in S$ and $S_2 \in S$. Some properties checked may include: Liveness, where a property eventually occurs e.g. used to check whether a response is eventually given or to check if cycles occur and Safety where a property always holds e.g. the reachability problem, to check whether or not a bad state can be reached. \\
+Bounded model checking \cite[p. 2029]{ModelChecking} where a property is checked within some k steps can be solved by SAT solvers checking for satisfiability on the formula: \\
 \begin{center}
-$I(s_0) \land \bigwedge \limits_{i=0}^{k-1} \tau(s_i, s_i+1) \land \bigvee \limits_{i=0}^{k}\neg p(s_i)$ 
+$I(v_0) \land \bigwedge \limits_{i=0}^{k-1} \tau(v_i, v_i+1) \land \bigvee \limits_{i=0}^{k}\neg p(s_i)$ 
 \end{center}
-Where $I(s_0)$ is defined as $s_0$ being the initial state, and all states $s_i$ are iterated through by a legal transition state and none of the states reached have the property $p$.\\\\ 
+Where $I(v_0)$ is defined as $v_0$ being the initial state, and all states $v_i$ are iterated through by a legal transition state and none of the states reached have the property $p$.\\\\ 
 \newpage
 {\bf Project Overview}\\\\
 The structure of this project will be focused on gaining insight in the multiple variations of SAT solvers from a theoretical view. Moreover, the projects goal of implementing of SAT solvers will allow a more in depth insight on workings of the algorithms.
 \\\\
-DPLL algorithm - Davis Putnam Loveland Logemann - is one such variety and one that is a basis to many modern day solvers, the algorithms involves getting as input a CNF formula and outputs whether the formula is satisfiable and if it is in fact satisfiable then it returns an assignment of variables that does so. The procedure to this algorithm follows a tree where each node of the tree is a set of clauses $S$ and at each node an assignment to a variable is made. 
+DPLL algorithm \cite{DPLL}- Davis Putnam Loveland Logemann - is one such variety and one that is a basis to many modern day solvers, the algorithms involves getting as input a CNF formula and outputs whether the formula is satisfiable and if it is in fact satisfiable then it returns an assignment of variables that does so. The procedure to this algorithm follows a tree where each node of the tree is a set of clauses $S$ and at each node an assignment to a variable is made. 
 \begin{center}
 	\begin{tikzpicture}[level/.style={sibling distance=60mm/#1}]
 		\node [circle,draw] {}
@@ -103,7 +103,7 @@ DPLL algorithm - Davis Putnam Loveland Logemann - is one such variety and one th
 \end{center}
 At each node after a variable has been assigned, we then continually apply inference (propagation) and so reducing the number of assignments and thus nodes in the tree. A node no longer has children if the node has the set \{\} as its set of clauses or if the set of clauses contain the empty set $\epsilon \in$ S. \\
 If a branch has \{\} has its set of clauses then the formula is satisfiable and if all branches' set of all clauses contain the empty set $\epsilon \in$ S then the formula is unsatisfiable. \\\\
-CDCL - Conflict Driven Clause Learning - is another variety of SAT solvers first used in Grasp [1] which has influenced many modern SAT Solvers, this variety of solvers is characterised by adding new clauses to its initial set of clauses as the algorithm progresses and non-chronological backtracking. As the search progresses and the branch of the search tree encounters a conflict i.e. a variable is previously set True and the most recent propagation requires the variable to be set False or vice versa. Through the conflict the algorithm learns the clause to be added to our set of clauses (clause database). The non-chronological backtracking and clause learning enables the algorithm to prune the search tree and significantly reduce the time of discovering a satisfiable assignment or to show that the formula is unsatisfiable. \\\\
+CDCL \cite[p. 131]{CDCL} - Conflict Driven Clause Learning - is another variety of SAT solvers first used in Grasp \cite{GRASP} which has influenced many modern SAT Solvers, this variety of solvers is characterised by adding new clauses to its initial set of clauses as the algorithm progresses and non-chronological backtracking. As the search progresses and the branch of the search tree encounters a conflict i.e. a variable is previously set True and the most recent propagation requires the variable to be set False or vice versa. Through the conflict the algorithm learns the clause to be added to our set of clauses (clause database). The non-chronological backtracking and clause learning enables the algorithm to prune the search tree and significantly reduce the time of discovering a satisfiable assignment or to show that the formula is unsatisfiable. \\\\
 There are also local search algorithms for SAT which is not complete and so may not provide an assignment of variables that satisfy the formula and may not be able to show that the formula is unsatisfiable however these algorithms can be shown to be efficient in specific cases of problems.\\
 Furthermore, a more modern approach to solving SAT problems is the use of machine learning and describing the problem as a classification problem, we can classify SAT problems so that solvers more efficient on specific categories of problems can be applied, this is in contrast to the more general SAT solvers.\\\\
 {\bf Project Deliverables}\\\\
@@ -186,7 +186,7 @@ Furthermore, a more modern approach to solving SAT problems is the use of machin
 %Run against multiple examples and check speed
 
 \section{Design}
-The design outcome of this project is to produce multiple SAT solvers that can take as input a text file of the satisfiability problem in DIMACS format [reference to http://www.satcompetition.org/2009/format-benchmarks2009.html. \\\\
+The design outcome of this project is to produce multiple SAT solvers that can take as input a text file of the satisfiability problem in DIMACS format  \cite{dimacsFormat}[http://www.domagoj-babic.com/uploads/ResearchProjects/Spear/dimacs-cnf.pdf] \\\\
 \texttt{
 c - this is a comment\\
 c \\
@@ -207,10 +207,9 @@ As we will comparing run times of implementations it will be useful to remove ov
 
 {\bf SAT Solver Variations}\\\\
 {\bf DPLL}\\
-The DPLL algorithm is a backtracking search of possible assignments of variables.Our implementation of this algorithm will follow the simplest depth first search version, a recursive form that branches on a decided variable.\\
+The DPLL algorithm is a backtracking search of possible assignments of variables.Our implementation of this algorithm will follow the simplest depth first search version, a recursive form \cite[p. 92]{DPLL-Implementation} that branches on a decided variable.\\
 We initially run unit propagation on our input clauses and check for satisfiability or unsatisfiability. Unit propagation is the search for any unit clauses, where a unit clause is a clause that contains only one literal, after finding a unit clause we then fix the literal (i.e. a variable or its negation) found in the unit clause to True, furthermore, for every clause that contains the literal we remove from our set of clauses as well as removing negations of literals from all clauses.\\
 We then check for an empty set of clause to indicate that the problem is satisfied, whereas if there is an empty set within our set of clause then the problem is unsatisfied.\\ 
-(reference to graph on previous pages???)\\
 After the initial check for satisfiability and unsatisfiability we then decide a variable to branch on, the function is recursively called twice on the set of clauses with the addition of either adding a unit clause of the variable in one case or a unit clause of it's negation in the other case.
 \texttt{
 \begin{center}Unit Propagation \end{center} 
@@ -233,7 +232,7 @@ begin\\
 \hspace*{1cm}return DPLL-recursive$(F |_{\neg\ell},\rho \cup \{\neg l \})$ \\
 end
 }
-\begin{center}Pseudocode for DPLL Implementation [reference] \end{center}
+\begin{center}Pseudocode for DPLL Implementation \cite[p. 93]{DPLL-Implementation} \end{center}
 The DPLL is an early SAT Solver and our implementation has many optimisations that can be added, for example we can consider: 
 \begin{itemize}
 	\item{More optimally deciding which variable to branch on.}
@@ -278,8 +277,8 @@ while (not AllVariablesAssigned$(\phi, v))$}
 \hspace*{4cm} $dl \leftarrow \beta$ }
 \end{enumerate}
 }
-\begin{center}Pseudocode for CDCL Implementation [reference] \end{center}
-Definitions:\\
+\begin{center}Pseudocode for CDCL Implementation \cite[p. 136]{CDCL} \end{center}
+Definitions \cite[p.132]{CDCL}:\\
 \begin{itemize}
 \item{
 Decision Level: every literal has a decision level $\delta(l)$, at each decision stage of our algorithm the decision level is incremented and the decided literal is set the new decision level, during the unit propagation stage if a literal is fixed True then its decision level is set the same as the decision level of the most recent decided literal.}
@@ -303,7 +302,7 @@ A function $\sigma$ that takes input a clause $\omega$ and a decision level $\de
 \end{itemize}
 In this project I will focus only a few of the many optimisations for CDCL including: clause learning with UIP (unique implication points), lazy data structures with watched literals and backtracking to the first UIP.
 \begin{enumerate}
-\item{clause learning with UIP - Conflicts occur during the unit propagation stage, we search through the antecedents of variables of the highest decision level, those that were assigned during the most recent unit propagation, from these antecedents we add to a empty clause the literals that have a decision level value lower than the current decision level, finding such variables is achievable through resolution, this new clause will be the learnt clause and is added to our current set of clauses.\\\\
+\item{clause learning with UIP \cite{GRASP} - Conflicts occur during the unit propagation stage, we search through the antecedents of variables of the highest decision level, those that were assigned during the most recent unit propagation, from these antecedents we add to a empty clause the literals that have a decision level value lower than the current decision level, finding such variables is achievable through resolution, this new clause will be the learnt clause and is added to our current set of clauses.\\\\
 \texttt{
 Resolution$(\omega1, \omega2)$ or more simply $\omega1\odot\omega2$: \\
 Input: two clauses with one containing unique variable x and the other containing $\neg$x :\\ \hspace*{1cm} $\omega1$ = (x $\lor$ y1  $\lor$ y2 $\lor$ ...), $\omega2$ = ($\neg$x $\lor$ z1 $\lor$ z2 $\lor$ ...)\\\\
@@ -319,7 +318,7 @@ Using resolution and our definitions we can now produce a method of finding a le
 \]
 Where $\kappa$ is the conflict clause.
 }
-\item{Watched Literals - This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the watched literal is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.\\
+\item{Watched Literals \cite{chaff}- This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the watched literal is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.\\
 \begin{center}
 \begin{tikzpicture}
 \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
@@ -375,7 +374,7 @@ One watched literal is fixed True so watched literals no longer need updating.
 \end{tikzpicture}\\
 \end{center}
 }
-\item{Backtracking to first UIP - Simply this means that a backtrack level is set to highest decision level in the learnt clause and the current decision level is set to the backtrack level, moreover, all literals whose decision level is greater than or equal to the backtrack level is unfixed and their antecedents reset.}
+\item{Backtracking to first UIP \cite{firstUIPbacktrack} - Simply this means that a backtrack level is set to highest decision level in the learnt clause and the current decision level is set to the backtrack level, moreover, all literals whose decision level is greater than or equal to the backtrack level is unfixed and their antecedents reset.}
 
 \end{enumerate}
 \newpage
@@ -383,7 +382,7 @@ One watched literal is fixed True so watched literals no longer need updating.
 A local search algorithm can be described by a search space in which the algorithm traverses through going along a transition from one state to another (a state is a candidate answer to our search problem) if there is a local transformation of that state to the next, each state has a calculated value which in our traversal of this space we want to maximise.
 Local search algorithms are used to solve optimisation problems in contrast to our satisfiability problem which a decision problem, therefore we can translate our satisfiability problem to a suitable optimisation problem: MAX-SAT.\\\\
 MAX-SAT: Find a assignment of variables that satisfies the maximum number of clauses when given as input a boolean formula in context normal form.\\\\
-The algorithm we will look at in this project will be Walksat[reference] which we will implement as a incomplete algorithm to solve our satisfiability problem.\\
+The algorithm we will look at in this project will be Walksat \cite{WalkSat} which we will implement as a incomplete algorithm to solve our satisfiability problem.\\
 Walksat is a variation of GSAT, where GSAT is an algorithm that simply starts with a random assignment of variables and for set number of a tries MAX-TRIES it flips a set number of variables MAX-FLIPS, each flip is decided if it results in the greatest decrease in the number of unsatisfied clauses.\\
 Walksat is a slight variation of GSAT: it also starts with a random assignment of variables but then instead randomly selects a unsatisfied clause and either randomly or greedily selects a variable to flip. The maximum number of flips each iteration is again defined by MAX-FLIP and the maximum number of iterations is MAX-TRIES.\\\\
 \texttt{
@@ -410,9 +409,9 @@ return UNSAT}
 \end{enumerate}
 }\hfill\\
 {\bf SAT Solvers with Machine Learning}\\
-More modern day SAT solvers are now implementing machine learning techniques, however these solvers act differently to our previous variations instead of solving a satisfiability problem they instead classify a problem to one of the solvers in a small list of SAT solvers in what is called a SAT solver portfolio, by classifying a SAT problem to one of many solvers the intent is to select the fastest solver for that specific problem. \\\\
+More modern day SAT solvers are now implementing machine learning techniques, however these solvers act differently to our previous variations instead of solving a satisfiability problem they instead classify a problem to one of the solvers in a small list of SAT solvers in what is called a SAT solver portfolio \cite{satzilla}, by classifying a SAT problem to one of many solvers the intent is to select the fastest solver for that specific problem. \\\\
 Due to the time restraint of this project I will not be implementing my own SAT solver portfolio and will instead focus on the machine learning techniques instead. In this project we will attempt to apply neural networks to classify SAT problems, in order to this we must consider features most suitable for the network to learn from such that there is enough variety so there isn't under-fitting, furthermore each feature should contribute to the network and not be redundant. \\\\ 
-Some features to consider may include: Number of clauses, number of variables, number of clauses of specific size, time required to create clause graph, time required to create variable graph and many more.\\\\
+Some features \cite{machineLearningFeatures} to consider may include: Number of clauses, number of variables, number of clauses of specific size, time required to create clause graph, time required to create variable graph and many more.\\\\
 Neural networks consist of "neurones" in our case these will be logistic units, the input layer these logistic units will output the features calculated from the example sat problem, from this every input neurone is connected to a neurone in the next hidden layer and we can calculate values using a logistic function values in what is known as forward propagation and it is with this forward propagation we can classify our problem.\\\\
 However, for this classification to be more accurate we must optimise the "neurones" within the network by running back-propagation, this will result in gradient descent of the squared error cost function of our predicted classification.\\\\
 \begin{center}
@@ -454,14 +453,10 @@ However, for this classification to be more accurate we must optimise the "neuro
 \end{tikzpicture}
 \end{center}
 {\bf Testing and Evaluation}\\
-In order to evaluate the variety of SAT solvers that will be produced in this project we will use example sat problems that has been provided as a resource for the sat competitions, these examples are found in the sat competition website [reference] and are categorised in both whether the problem is satisfiable or not and also into categories as to what real world application was the sat problem based on e.g. [-----------]. \\
+In order to evaluate the variety of SAT solvers that will be produced in this project we will use example sat problems that has been provided as a resource for the sat competitions, these examples are found in the sat competition website \cite{satComp} and are categorised in whether the problem is satisfiable or not and also gives a variety of sat problems in terms of number of clauses and variables and overall structure of variables found in the clauses.\\
 With this data we can test given a standard amount of time e.g. 6000 seconds on average what is the highest number of variables can a specific solver take as input and still be able to provide an assignment of variables, therefore we can acquire a comparison on the overall performance of SAT solvers. \\
 Moreover, we will evaluate individually how optimisations can affect the performance of solvers and whether optimisations or variations of solvers work well on every instance of the sat problem or specific cases.
-\subsection{References}
 
-The list of cited references should appear at the end of the report, ordered alphabetically by the surnames of the first authors.  The default style for references cited in the main text is the  Harvard (author, date) format.  When citing a section in a book, please give the relevant page numbers, as in \cite[p293]{budgen}.  When citing, where there are either one or two authors, use the names, but if there are more than two, give the first one and use ``et al.'' as in  , except where this would be ambiguous, in which case use all author names.
-
-You need to give all authors' names in each reference.  Do not use ``et al.'' unless there are more than five authors.  Papers that have not been published should be cited as ``unpublished'' \cite{euther}.  Papers that have been submitted or accepted for publication should be cited as ``submitted for publication'' as in \cite{futher} .  You can also cite using just the year when the author's name appears in the text, as in ``but according to Futher \citeyear{futher}, we \dots''.  Where an authors has more than one publication in a year, add `a', `b' etc. after the year.
 
 
 

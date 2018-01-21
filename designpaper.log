@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  20 JAN 2018 01:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  21 JAN 2018 01:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -716,13 +716,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
  []
 
 
-Overfull \hbox (12.86316pt too wide) in paragraph at lines 68--71
-\OT1/ptm/m/n/12 of the hard-ware by de-scrib-ing hard-ware func-tion-al-ity as 
-a model: a set of states S = $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X[]; X[]; :::;
- X[]\OMS/cmsy/m/n/12 g$
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
@@ -773,12 +766,6 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 198.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (78.90952pt too wide) in paragraph at lines 189--200
-\OT1/ptm/m/n/12 text file of the sat-is-fi-a-bil-ity prob-lem in DI-MACS for-ma
-t [ref-er-ence to http://www.satcompetition.org/2009/format-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
@@ -814,31 +801,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--207
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--222
+Underfull \hbox (badness 10000) in paragraph at lines 208--221
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 222.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 221.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--236
+Underfull \hbox (badness 10000) in paragraph at lines 221--235
 
  []
 
 
-Overfull \hbox (14.06792pt too wide) in paragraph at lines 222--236
+Underfull \hbox (badness 10000) in paragraph at lines 221--235
+
+ []
+
+
+Overfull \hbox (14.06792pt too wide) in paragraph at lines 221--235
 \OT1/pcr/m/n/12 Input : A CNF formula F and an initially empty partial assignme
 nt
  []
 
 [6]
-Overfull \hbox (14.4002pt too wide) in paragraph at lines 280--280
+Overfull \hbox (14.4002pt too wide) in paragraph at lines 279--279
 []|  \OT1/pcr/m/n/12 then $\OML/cmm/m/it/12 ^^L$ \OT1/pcr/m/n/12 = ConflictAnal
 ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  if $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^L < \OT1/cmr/m/n/12 0)$ \OT1/ptm/b/n/1
@@ -846,97 +833,97 @@ ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 306--313
+Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
  []
 
 
-Overfull \hbox (7.44263pt too wide) in paragraph at lines 306--313
+Overfull \hbox (7.44263pt too wide) in paragraph at lines 305--312
 \OT1/pcr/m/n/12 Input: two clauses with one containing unique variable x and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--313
+Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
  []
 
 
-Overfull \hbox (14.64262pt too wide) in paragraph at lines 306--313
+Overfull \hbox (14.64262pt too wide) in paragraph at lines 305--312
 \OT1/pcr/m/n/12 Output: clause containing all variables found in both clauses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--313
+Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--313
+Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 382--411
+Underfull \hbox (badness 10000) in paragraph at lines 381--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--411
+Underfull \hbox (badness 10000) in paragraph at lines 381--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--411
+Underfull \hbox (badness 10000) in paragraph at lines 381--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--411
+Underfull \hbox (badness 10000) in paragraph at lines 381--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
 
  []
 
@@ -944,46 +931,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--418
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [11]
+ [11] (./designpaper.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+[]| | \OT1/ptm/m/it/12 Sat-is-fi-a-bil-ity Sug-gested For-mat \OT1/ptm/m/n/12 (
+1993), \OT1/ptm/m/it/12 http://www.domagoj-
+ []
 
-LaTeX Warning: Citation 'budgen' on page 12 undefined on input line 462.
-
-
-LaTeX Warning: Citation 'euther' on page 12 undefined on input line 464.
-
-
-LaTeX Warning: Citation 'futher' on page 12 undefined on input line 464.
-
-
-LaTeX Warning: Citation 'futher' on page 12 undefined on input line 464.
-
-No file designpaper.bbl.
-[12] (./designpaper.aux) ) 
+) [12] (./designpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 17966 strings out of 493089
- 399216 string characters out of 6134842
- 467357 words of memory out of 5000000
- 21121 multiletter control sequences out of 15000+600000
- 20359 words of font info for 46 fonts, out of 8000000 for 9000
+ 18016 strings out of 493089
+ 400062 string characters out of 6134842
+ 468115 words of memory out of 5000000
+ 21167 multiletter control sequences out of 15000+600000
+ 22043 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,69p,857b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/urw/times/utmr8a.pfb>
-Output written on designpaper.pdf (12 pages, 156111 bytes).
+ 55i,12n,69p,901b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips
+/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on designpaper.pdf (12 pages, 171595 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
