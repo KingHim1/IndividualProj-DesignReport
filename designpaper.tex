@@ -26,7 +26,7 @@
 
 \begin{abstract}\newline\newline
 {\bf Context/Background}\newline \\
-The purpose of SAT Solvers is the solve the satisfiability problem, they are in use in modern day technologies for many practical reasons including: model checking, hardware verification, automatic test pattern generation, planning, scheduling, and even challenging problems from algebra. Over the years, we have seen new implementations of these SAT solvers which more importantly are becoming more efficient.  
+The purpose of SAT Solvers is the solve the satisfiability problem, they are in use in modern day technologies for many practical reasons including: model checking, hardware verification, scheduling, planning and many more. Over the years, we have seen new implementations of these SAT solvers which more importantly are becoming more efficient.  
 \\\\
 {\bf Aims}\\\\
 The aim of this project is to research modern day SAT solvers and understand the reasons to their efficiency, discovering different implementations and understanding their uses is therefore vital. Furthermore, another aim of this project and one in which concrete results can be produced is the implementation of a SAT Solver capable in solving more difficult satisfiability problems.
@@ -316,7 +316,7 @@ Using resolution and our definitions we can now produce a method of finding a le
   \end{cases}
 \]
 Where $\kappa$ is the conflict clause.\\
-This is an iterative method that repeats until $\omega$ remains unchanged, by repeatedly calling resolution on the clause and its literals where the literal has decision level  $d$ we arrive at a stage where the only remaining literal in the clause with decision level $d$ is the decision literal, this resulting clause is the learnt clause.
+This is an iterative method that repeats until $\omega$ remains unchanged, by repeatedly calling resolution on the clause and its literals where the literal has decision level  $d$ we arrive at a stage where the only remaining literal in the clause has decision level, this resulting clause is the learnt clause. This First UIP clause learning method has the benefit of reducing the size of the learnt clause. 
 }
 \item{Watched Literals \cite{chaff}- This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the watched literal is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.\\
 \begin{center}
