@@ -131,11 +131,11 @@ Furthermore, a more modern approach to solving SAT problems is the use of machin
 			\begin{itemize}
 				\item{- Read articles and research papers on the use of machine learning in SAT solving}
 			\end{itemize}
-		\item Implement a DPLL SAT Solver using an efficient programming language
+		\item Implement a CDCL SAT Solver using an efficient programming language
 			\begin{itemize}
-				\item{- implement DPLL Sat Solver using the previously studied lower level programming language.}
+				\item{- implement CDCL Sat Solver using the previously studied lower level programming language.}
 			\end{itemize}
-		\item Implement a DPLL SAT Solver involving multiple optimisations
+		\item Implement a CDCL SAT Solver involving multiple optimisations
 			\begin{itemize}
 				\item{- implement efficient data structures using the lower level language and implement researched optimisations to the algorithm e.g. watched literals.}
 			\end{itemize}
@@ -143,7 +143,7 @@ Furthermore, a more modern approach to solving SAT problems is the use of machin
 	\end{enumerate}
 {\bf Advanced Deliverables}
 	\begin{enumerate}
-		\item Analyse the efficiency benefits of the different optimisations in DPLL and its possible costs
+		\item Analyse the efficiency benefits of the different optimisations in DPLL/CDCL and its possible costs
 		\item Using the knowledge of most beneficial optimisations create a SAT Solver that is as efficient as possible (with the optimisations explored)
 		\item Implement a SAT Solver that utilises machine learning giving its benefits and costs
 	\end{enumerate}
@@ -315,7 +315,8 @@ Using resolution and our definitions we can now produce a method of finding a le
      \omega_L ^{d, i-1} & \quad \text{if } i \neq 0 \land \sigma(\omega_L ^{d, i-1}, d) = 1
   \end{cases}
 \]
-Where $\kappa$ is the conflict clause.
+Where $\kappa$ is the conflict clause.\\
+This is an iterative method that repeats until $\omega$ remains unchanged, by repeatedly calling resolution on the clause and its literals where the literal has decision level  $d$ we arrive at a stage where the only remaining literal in the clause with decision level $d$ is the decision literal, this resulting clause is the learnt clause.
 }
 \item{Watched Literals \cite{chaff}- This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the watched literal is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.\\
 \begin{center}
