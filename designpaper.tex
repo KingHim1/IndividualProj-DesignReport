@@ -75,30 +75,22 @@ This problem is NP-complete and many other problems can be encoded as a Satisfia
 {\bf Project Overview}\\\\
 The structure of this project will be focused on gaining insight in the multiple variations of SAT solvers from a theoretical view. Moreover, the projects goal of implementing of SAT solvers will allow a more in depth insight on workings of the algorithms.
 \\\\
-DPLL algorithm \cite{DPLL}- Davis Putnam Loveland Logemann - is one such variety and one that is a basis to many modern day solvers, the algorithms involves getting as input a CNF formula and outputs whether the formula is satisfiable and if it is in fact satisfiable then it returns an assignment of variables that does so. The procedure to this algorithm follows a tree where each node of the tree is a set of clauses $S$ and at each node an assignment to a variable is made. 
+DPLL algorithm \cite{DPLL}- Davis Putnam Loveland Logemann - is one such variety and one that is a basis to many modern day solvers, the algorithms involves getting as input a CNF formula and outputs whether the formula is satisfiable and if it is in fact satisfiable then it returns an assignment of variables that does so. The procedure to this algorithm follows a tree where each node of the tree is a set of clauses $S$ and at a transition to each node is an assignment to a variable such that S is then updated. 
 \begin{center}
-	\begin{tikzpicture}[level/.style={sibling distance=60mm/#1}]
-		\node [circle,draw] {}
-			child {node [circle,draw]  {$A$}
-				child {node [circle,draw]  {$B$}
-					child{ node {...}}
-					child{ node {...}}
-					}	
-				child {node [circle,draw]  {$\neg B$}
-					child{ node {...}}
-					child{ node {...}}
-				}
-			}
-			child {node [circle,draw] {$\neg A$}
-				child {node [circle,draw]  {}
-					child{ node {...}}
-					child{ node {...}}}
-				child {node [circle,draw]  {}
-					child{ node {...}}
-					child{ node {...}}
-				}
-			};
-	\end{tikzpicture}
+\begin{forest}
+for tree={circle,draw, l sep=25pt}
+[ 
+    [,edge label={node[midway,left] {$A$}}  
+      [,edge label={node[midway,left] {$B$}} ] 
+      [,edge label={node[midway,right] {$\neg B$}}] 
+    ]
+    [,edge label={node[midway,right] {$\neg A$}}
+      [] 
+      [] 
+  ] 
+]
+\end{forest}
+
 \end{center}
 At each node after a variable has been assigned, we then continually apply inference (propagation) and so reducing the number of assignments and thus nodes in the tree. A node no longer has children if the node has the set \{\} as its set of clauses or if the set of clauses contain the empty set $\epsilon \in$ S. \\
 If a branch has \{\} has its set of clauses then the formula is satisfiable and if all branches' set of all clauses contain the empty set $\epsilon \in$ S then the formula is unsatisfiable. \\\\
@@ -205,7 +197,7 @@ On the other hand, C++ is a middle level language allowing for lower level contr
 As we will comparing run times of implementations it will be useful to remove overheads provided from the language and so C++ is a more suitable language for this purpose. \\\\
 
 {\bf SAT Solver Variations}\\\\
-{\bf DPLL}\\
+{\bf DPLL}\\\\
 The DPLL algorithm is a backtracking search of possible assignments of variables.Our implementation of this algorithm will follow the simplest depth first search version, a recursive form \cite[p. 92]{DPLL-Implementation} that branches on a decided variable.\\
 We initially run unit propagation on our input clauses and check for satisfiability or unsatisfiability. Unit propagation is the search for any unit clauses, where a unit clause is a clause that contains only one literal, after finding a unit clause we then fix the literal (i.e. a variable or its negation) found in the unit clause to True, furthermore, for every clause that contains the literal we remove from our set of clauses as well as removing negations of literals from all clauses.\\
 We then check for an empty set of clause to indicate that the problem is satisfied, whereas if there is an empty set within our set of clause then the problem is unsatisfied.\\ 
@@ -219,65 +211,20 @@ Find Unit Clauses:\\ \hspace*{1cm}  (q $\lor$ r) $\land$ \textbf{(s)} \\
 Unit Propagation:\\ \hspace*{1cm} Set literal in unit clause to true e.g. assign s to True.
 }\\\\
 Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack, in our basic variafhtion of our DPLL algorithm we backtrack to the last decision stage in which both values has not yet been assigned to the variable.\\\\
-\texttt{
-Input : A CNF formula F and an initially empty partial assignment $\rho$ \\
-Output : UNSAT, or an assignment satisfying $F$\\
-begin\\
-\hspace*{1cm}$(F,\rho)$ $\leftarrow$ UnitPropagate $(F,\rho)$\\
-\hspace*{1cm}if $F$ contains the empty clause then return UNSAT\\
-\hspace*{1cm}if $F$ has no clauses left then Output $\rho$ return SAT\\
-\hspace*{1cm}$l \leftarrow$ a literal not assigned by $\rho$  //the branching step \\
-\hspace*{1cm}if DPLL-recursive $(F |_\ell,\rho \cup \{\ell\})$ = SAT then return SAT\\
-\hspace*{1cm}return DPLL-recursive$(F |_{\neg\ell},\rho \cup \{\neg l \})$ \\
-end
-}
-\begin{center}Pseudocode for DPLL Implementation \cite[p. 93]{DPLL-Implementation} \end{center}
 The DPLL is an early SAT Solver and our implementation has many optimisations that can be added, for example we can consider: 
 \begin{itemize}
 	\item{More optimally deciding which variable to branch on.}
 	\item{Ignoring branches that will not have a satisfying assignment.}
 \end{itemize}
 \hfill\\
-{\bf CDCL}\\
+{\bf CDCL}\\\\
 CDCL Solvers are a variation of the DPLL algorithm and employs clause learning and other optimisations. Clause learning is the addition of learnt clauses to the original boolean formula throughout the running of the algorithm and is what distinguishes a CDCL solver to the original DPLL solvers. Our CDCL implementation will follow a repeating three stage process: Decide, Deduce and Resolve. 
 \begin{enumerate}
 	\item{Decide - At the decide stage of our algorithm we select a variable and assign it a value 0 or 1.}
 	\item{Deduce - After the decide stage, remove all clauses with literals of which evaluates to True due to the decided variable assignment, moreover, remove all literals from clauses where that literal evaluates to false after the decided variable. Finally, we can see if we can deduce any new assignment of variables through unit propagation.}
 	\item{Resolve - Once all assignments have been propagated and there are no longer any new variables to be assigned a value we check to see if there are any conflicts. If a conflict exists we backtrack to the first unique implication point (UIP), from the conflict we can also learn new clauses that can be added to our input set of clauses.}
 \end{enumerate}
-\texttt{CDCL$(\phi, v)$
-\begin{enumerate}
-\itemsep0em
-\item{
-if (UnitPropagation$(\phi, v)$ == CONFLICT) }
-\item{
-\hspace*{0.5 cm} then return UNSAT}
-\item{
-dl $\leftarrow$ 0}
-\item{
-while (not AllVariablesAssigned$(\phi, v))$}
-\item{
-\hspace*{0.5cm} do $(x, v)$ = PickBranchingVariable$(\phi, v)$ \bf{[decide stage]}} 
-\item{
-\hspace*{1cm} $dl \leftarrow dl + 1$}
-\item{
-\hspace*{1.5cm} $v \leftarrow v \cup \{ (x, v) \}$}
-\item{
-\hspace*{2cm}if (UnitPropagation$(\phi, v)$ == CONFLICT) \bf{[deduce stage]}}
-\item{
-\hspace*{2.5cm} return SAT}
-\item{
-\hspace*{3cm} then $\beta$ = ConflictAnalysis$(\phi, v)$ if $(\beta < 0)$ \bf{[resolve stage]}}
-\item{
-\hspace*{3.5cm} then return UNSAT }
-\item{
-\hspace*{3.5cm} else Backtrack$(\phi, v, \beta)$}
-\item{
-\hspace*{4cm} $dl \leftarrow \beta$ }
-\end{enumerate}
-}
-\begin{center}Pseudocode for CDCL Implementation \cite[p. 136]{CDCL} \end{center}
-Definitions \cite[p.132]{CDCL}:\\
+Useful Definitions \cite[p.132]{CDCL} for CDCL:
 \begin{itemize}
 \item{
 Decision Level: every literal has a decision level $\delta(l)$, at each decision stage of our algorithm the decision level is incremented and the decided literal is set the new decision level, during the unit propagation stage if a literal is fixed True then its decision level is set the same as the decision level of the most recent decided literal.}
@@ -318,66 +265,12 @@ Using resolution and our definitions we can now produce a method of finding a le
 Where $\kappa$ is the conflict clause.\\
 This is an iterative method that repeats until $\omega$ remains unchanged, by repeatedly calling resolution on the clause and its literals where the literal has decision level  $d$ we arrive at a stage where the only remaining literal in the clause has decision level, this resulting clause is the learnt clause. This First UIP clause learning method has the benefit of reducing the size of the learnt clause. 
 }
-\item{Watched Literals \cite{chaff}- This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if the watched literal is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.\\
-\begin{center}
-\begin{tikzpicture}
-\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
-\draw (1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0) node at (1.5, 0.5){w};
-\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0);
-\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
-\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
-\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
-\end{tikzpicture}\\
-\end{center}
-Clause represented by array - first two literals are watched literals.\\
-\begin{center}
-\begin{tikzpicture}
-\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
-\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0) node [black] at (1.5, 0.5){w};
-\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0);
-\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
-\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
-\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
-\end{tikzpicture}\\
-\end{center}
-Second literal fixed to False.
-\begin{center}
-\begin{tikzpicture}
-\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
-\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0);
-\draw (2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0) node at (2.5, 0.5){w};
-\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
-\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
-\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
-\end{tikzpicture}\\
-\end{center}
-Second watched literals reference is set to another literal that has not yet been fixed.
-\begin{center}
-\begin{tikzpicture}
-\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node at (0.5, 0.5){w};
-\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0);
-\draw [blue, ultra thick](2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0) node [black] at (2.5, 0.5){w};
-\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
-\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
-\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
-\end{tikzpicture}\\
-\end{center}
-One watched literal is fixed True so watched literals no longer need updating.
-\begin{center}
-\begin{tikzpicture}
-\draw [red, ultra thick](0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0) node [black] at (0.5, 0.5){w};
-\draw [red, ultra thick](1,0) -- (2,0) -- (2,1) -- (1,1) -- (1,0);
-\draw [blue, ultra thick](2,0) -- (3,0) -- (3,1) -- (2,1) -- (2,0) node [black] at (2.5, 0.5){w};
-\draw (3,0) -- (4,0) -- (4,1) -- (3,1) -- (3,0);
-\draw (4,0) -- (5,0) -- (5,1) -- (4,1) -- (4,0);
-\draw (5,0) -- (6,0) -- (6,1) -- (5,1) -- (5,0);
-\end{tikzpicture}\\
-\end{center}
+\item{Watched Literals \cite{chaff}- This is a lazy data structure, it's implementation is to use references to two literals of each clause in our input set of clauses, simply by referencing only two variables we do not need to scan every literal in our clause to test for a unit clause instead we update our reference to another literal if one of the two watched literals is fixed False, whereas if a watched literal is fixed True then the references to the watched literals no longer need updating as the entire clause is satisfied. At the point where one watched literal is fixed false and the other can not reference any another literals left in the clause of which its variable has not been assigned then the clause is a unit clause.
 }
 \item{Backtracking to first UIP \cite{firstUIPbacktrack} - Simply this means that a backtrack level is set to highest decision level in the learnt clause and the current decision level is set to the backtrack level, moreover, all literals whose decision level is greater than or equal to the backtrack level is unfixed and their antecedents reset.}
 
 \end{enumerate}
-\newpage
+\hfill\\
 {\bf Local Search Algorithms}\\\\
 A local search algorithm can be described by a search space in which the algorithm traverses through going along a transition from one state to another (a state is a candidate answer to our search problem) if there is a local transformation of that state to the next, each state has a calculated value which in our traversal of this space we want to maximise.
 Local search algorithms are used to solve optimisation problems in contrast to our satisfiability problem which a decision problem, therefore we can translate our satisfiability problem to a suitable optimisation problem: MAX-SAT.\\\\
