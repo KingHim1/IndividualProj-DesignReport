@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  23 JAN 2018 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  23 JAN 2018 23:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,40 +872,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--303
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 [9]
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- (./designpaper.bbl [10]
+(./designpaper.bbl [10]
 Underfull \hbox (badness 10000) in paragraph at lines 38--42
 []| | \OT1/ptm/m/it/12 Sat-is-fi-a-bil-ity Sug-gested For-mat \OT1/ptm/m/n/12 (
 1993), \OT1/ptm/m/it/12 http://www.domagoj-
@@ -934,7 +938,7 @@ live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on designpaper.pdf (11 pages, 163420 bytes).
+Output written on designpaper.pdf (11 pages, 163530 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream

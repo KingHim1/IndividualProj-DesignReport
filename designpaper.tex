@@ -303,8 +303,13 @@ return UNSAT}
 }\hfill\\
 {\bf SAT Solvers with Machine Learning}\\
 More modern day SAT solvers are now implementing machine learning techniques, however these solvers act differently to our previous variations instead of solving a satisfiability problem they instead classify a problem to one of the solvers in a small list of SAT solvers in what is called a SAT solver portfolio \cite{satzilla}, by classifying a SAT problem to one of many solvers the intent is to select the fastest solver for that specific problem. \\\\
-Due to the time restraint of this project I will not be implementing my own SAT solver portfolio and will instead focus on the machine learning techniques instead. In this project we will attempt to apply neural networks to classify SAT problems, in order to this we must consider features most suitable for the network to learn from such that there is enough variety so there isn't under-fitting, furthermore each feature should contribute to the network and not be redundant. \\\\ 
+Due to the time restraint of this project I will not be implementing my own SAT solver portfolio and will instead look only at the machine learning techniques. In this project we will attempt to apply linear regression to select a SAT problem for a SAT Portfolio. Therefore, we will look at the "SATzilla"\cite{satzilla} algorithm, to run this algorithm we must consider the most suitable features to learn from so that there is enough variety meaning there there will not be under-fitting in predicted results, furthermore each feature should contribute to the learning process and not be redundant. \\\\ 
 Some features \cite{machineLearningFeatures} to consider may include: Number of clauses, number of variables, number of clauses of specific size, time required to create clause graph, time required to create variable graph and many more.\\\\
+
+
+
+
+
 Neural networks consist of "neurones" in our case these will be logistic units, the input layer these logistic units will output the features calculated from the example sat problem, from this every input neurone is connected to a neurone in the next hidden layer and we can calculate values using a logistic function values in what is known as forward propagation and it is with this forward propagation we can classify our problem.\\\\
 However, for this classification to be more accurate we must optimise the "neurones" within the network by running back-propagation, this will result in gradient descent of the squared error cost function of our predicted classification.\\\\
 \begin{center}
