@@ -66,13 +66,12 @@ In our consideration of this problem we will focus on Boolean Formulas in Conjun
 	\end{item}
 \end{itemize}
 This problem is NP-complete and many other problems can be encoded as a Satisfiability problem therefore by having efficient solvers for this problem means being able to solve many other problems. Some real world applications for SAT solvers include: Model checking, scheduling and problem solving.\\\\
-Model Checking \cite[p. 2027]{ModelChecking} is used for hardware verification and is a technique of checking some property of the hardware by describing hardware functionality as a model: a set of states S  = $\{X_1, X_2, ..., X_n\}$ and transition relations between states  $\tau(S_1, S_2), S_1\in S$ and $S_2 \in S$. Some properties checked may include: Liveness, where a property eventually occurs e.g. used to check whether a response is eventually given or to check if cycles occur and Safety where a property always holds e.g. the reachability problem, to check whether or not a bad state can be reached. \\
-Bounded model checking \cite[p. 2029]{ModelChecking} where a property is checked within some k steps can be solved by SAT solvers checking for satisfiability on the formula: \\
-\begin{center}
-$I(v_0) \land \bigwedge \limits_{i=0}^{k-1} \tau(v_i, v_i+1) \land \bigvee \limits_{i=0}^{k}\neg p(s_i)$ 
-\end{center}
-Where $I(v_0)$ is defined as $v_0$ being the initial state, and all states $v_i$ are iterated through by a legal transition state and none of the states reached have the property $p$.\\\\ 
-\newpage
+%Model Checking \cite[p. 2027]{ModelChecking} is used for hardware verification and is a technique of checking some property of the hardware by describing hardware functionality as a model: a set of states S  = $\{X_1, X_2, ..., X_n\}$ and transition relations between states  $\tau(S_1, S_2), S_1\in S$ and $S_2 \in S$. Some properties checked may include: Liveness, where a property eventually occurs e.g. used to check whether a response is eventually given or to check if cycles occur and Safety where a property always holds e.g. the reachability problem, to check whether or not a bad state can be reached. \\
+%Bounded model checking \cite[p. 2029]{ModelChecking} where a property is checked within some k steps can be solved by SAT solvers checking for satisfiability on the formula: \\
+%\begin{center}
+%$I(v_0) \land \bigwedge \limits_{i=0}^{k-1} \tau(v_i, v_i+1) \land \bigvee \limits_{i=0}^{k}\neg p(s_i)$ 
+%\end{center}
+%Where $I(v_0)$ is defined as $v_0$ being the initial state, and all states $v_i$ are iterated through by a legal transition state and none of the states reached have the property $p$.\\\\ 
 {\bf Project Overview}\\\\
 The structure of this project will be focused on gaining insight in the multiple variations of SAT solvers from a theoretical view. Moreover, the projects goal of implementing of SAT solvers will allow a more in depth insight on workings of the algorithms.
 \\\\
@@ -184,7 +183,7 @@ Furthermore, a more modern approach to solving SAT problems is the use of machin
 %Unit Testing
 %Comparison of algorithms
 %Run against multiple examples and check speed
-
+\newpage
 \section{Design}
 The design outcome of this project is to produce multiple SAT solvers that can take as input a text file of the satisfiability problem in DIMACS format  \cite{dimacsFormat}[http://www.domagoj-babic.com/uploads/ResearchProjects/Spear/dimacs-cnf.pdf] \\\\
 \texttt{

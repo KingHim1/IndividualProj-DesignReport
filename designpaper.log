@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  21 JAN 2018 01:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.6)  23 JAN 2018 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,121 +711,106 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 68--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 68--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 68--79
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 76--80
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--80
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
-
- []
-
-[3]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 198.
+[3] [4]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 197.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 189--200
+Underfull \hbox (badness 10000) in paragraph at lines 188--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--200
+Underfull \hbox (badness 10000) in paragraph at lines 188--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--200
+Underfull \hbox (badness 10000) in paragraph at lines 188--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--200
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 201--207
+Underfull \hbox (badness 10000) in paragraph at lines 188--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--207
+Underfull \hbox (badness 10000) in paragraph at lines 200--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--207
+Underfull \hbox (badness 10000) in paragraph at lines 200--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--221
+Underfull \hbox (badness 10000) in paragraph at lines 200--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--220
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 220.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--235
+Underfull \hbox (badness 10000) in paragraph at lines 220--234
 
  []
 
 
-Overfull \hbox (14.06792pt too wide) in paragraph at lines 221--235
+Underfull \hbox (badness 10000) in paragraph at lines 220--234
+
+ []
+
+
+Overfull \hbox (14.06792pt too wide) in paragraph at lines 220--234
 \OT1/pcr/m/n/12 Input : A CNF formula F and an initially empty partial assignme
 nt
  []
 
 [6]
-Overfull \hbox (14.4002pt too wide) in paragraph at lines 279--279
+Overfull \hbox (14.4002pt too wide) in paragraph at lines 278--278
 []|  \OT1/pcr/m/n/12 then $\OML/cmm/m/it/12 ^^L$ \OT1/pcr/m/n/12 = ConflictAnal
 ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  if $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^L < \OT1/cmr/m/n/12 0)$ \OT1/ptm/b/n/1
@@ -833,97 +818,97 @@ ysis$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^; v\OT1/cmr/m/n/12 )$ \OT1/pcr/m/n/12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--311
 
  []
 
 
-Overfull \hbox (7.44263pt too wide) in paragraph at lines 305--312
+Overfull \hbox (7.44263pt too wide) in paragraph at lines 304--311
 \OT1/pcr/m/n/12 Input: two clauses with one containing unique variable x and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--311
 
  []
 
 
-Overfull \hbox (14.64262pt too wide) in paragraph at lines 305--312
+Overfull \hbox (14.64262pt too wide) in paragraph at lines 304--311
 \OT1/pcr/m/n/12 Output: clause containing all variables found in both clauses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--311
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 381--410
+Underfull \hbox (badness 10000) in paragraph at lines 380--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--410
+Underfull \hbox (badness 10000) in paragraph at lines 380--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--410
+Underfull \hbox (badness 10000) in paragraph at lines 380--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--410
+Underfull \hbox (badness 10000) in paragraph at lines 380--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
@@ -941,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--42
 Here is how much of TeX's memory you used:
  18016 strings out of 493089
  400062 string characters out of 6134842
- 468115 words of memory out of 5000000
+ 468137 words of memory out of 5000000
  21167 multiletter control sequences out of 15000+600000
  22043 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -960,7 +945,7 @@ live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on designpaper.pdf (12 pages, 171595 bytes).
+Output written on designpaper.pdf (12 pages, 168738 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
